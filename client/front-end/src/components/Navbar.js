@@ -108,6 +108,9 @@ const BrandNumber = styled.span`
   flex-direction: column;
   justify-content: center;
   text-align: right;
+  @media (max-width: 900px) {
+    margin-bottom: 1%;
+  }
 `;
 
 const ToggleButton = styled.a`
@@ -119,9 +122,9 @@ const ToggleButton = styled.a`
   @media (max-width: 900px) {
     display: flex;
     position: absolute;
-    padding: 1%;
     top: 1%;
     right: 1%;
+    margin-bottom: 1%;
   }
 `;
 
@@ -141,6 +144,7 @@ const Nav = styled.nav`
   @media (max-width: 900px) {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 1%;
   }
 `;
 
