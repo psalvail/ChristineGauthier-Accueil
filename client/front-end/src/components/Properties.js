@@ -5,6 +5,7 @@ const Properties = () => {
   return (
     <div>
       <Navbar />
+      <div>Properties</div>
     </div>
   );
 };

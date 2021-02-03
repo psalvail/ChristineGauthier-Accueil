@@ -1,11 +1,12 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-const Purchases = () => {
+const Blogue = () => {
   return (
     <div>
       <Navbar />
+      <div>Blogue</div>
     </div>
   );
 };
-export default Purchases;
+export default Blogue;

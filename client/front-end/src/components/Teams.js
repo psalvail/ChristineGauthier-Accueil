@@ -5,6 +5,7 @@ const Teams = () => {
   return (
     <div>
       <Navbar />
+      <div>Teams</div>
     </div>
   );
 };
