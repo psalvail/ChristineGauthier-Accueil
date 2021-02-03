@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import BannerImg from "../Images/companybanner.png";
 import {FaChevronDown} from "react-icons/fa";
-import {IconContext} from "react-icons";
 import {GrSearch} from "react-icons/gr";
+import {Link} from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -19,16 +19,19 @@ const Navbar = () => {
       </ToggleButton>
       <Ul>
         <Ullinks>
-          <AnchorTag href="#">Accueil</AnchorTag>
+          <AnchorTag to="/">Accueil</AnchorTag>
         </Ullinks>
         <Ullinks>
-          <AnchorTag href="#">Propriétés</AnchorTag>
+          <AnchorTag to="/properties">Propriétés</AnchorTag>
         </Ullinks>
         <Ullinks>
-          <AnchorTag href="#">Vendre</AnchorTag>
+          <AnchorTag to="/purchases">Acheter</AnchorTag>
         </Ullinks>
         <Ullinks>
-          <AnchorTag href="#">
+          <AnchorTag to="/sales">Vendre</AnchorTag>
+        </Ullinks>
+        <Ullinks>
+          <AnchorTag to="/teams">
             Équipe
             <IconImg>
               <FaChevronDown />
@@ -42,15 +45,15 @@ const Navbar = () => {
               <EquipeAnchorTag href="#">Courtier</EquipeAnchorTag>
             </UlEquipelinks>
             <UlEquipelinks>
-              <EquipeAnchorTag href="#">Blog</EquipeAnchorTag>
+              <EquipeAnchorTag to="/blogue">Blog</EquipeAnchorTag>
             </UlEquipelinks>
           </ULEquipe>
         </Ullinks>
         <Ullinks>
-          <AnchorTag href="#">Blogue</AnchorTag>
+          <AnchorTag to="/blogue">Blog</AnchorTag>
         </Ullinks>
         <Ullinks>
-          <AnchorTag href="#">Contract</AnchorTag>
+          <AnchorTag to="/contactus">Contact</AnchorTag>
         </Ullinks>
         <SearchGlass>
           <GrSearch color="white" size="25px" />
@@ -59,6 +62,7 @@ const Navbar = () => {
     </Nav>
   );
 };
+
 const IconImg = styled.div`
   flex: 1;
   display: flex;
@@ -186,7 +190,7 @@ const EquipeAnchorTag = styled.a`
     transition-duration: 0.5s;
   }
 `;
-const AnchorTag = styled.a`
+const AnchorTag = styled(Link)`
   text-decoration: none;
   color: white;
   padding: 1rem;
